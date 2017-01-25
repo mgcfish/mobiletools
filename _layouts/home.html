@@ -1,0 +1,48 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body id="homepage">
+  <div class="block-left">
+    <div class="content">
+      <div class="main-info">
+        <a href="{{ site.url }}/drozer/blog" class="logo"><img src="{{ site.url }}/images/drozer-reverse.png"></a>
+        <h2>
+        The Android Security Assessment Framework <br><a style="color:#00f1a3;" href="https://labs.mwrinfosecurity.com">MWR Labs</a>
+        </h2>
+        <ul>
+          <li><a class="social-btn" href="https://twitter.com/mwrdrozer" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-twitter"></i></a></li>
+          <li><a class="social-btn" href="https://github.com/mwrlabs/drozer" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-github"></i></a></li>
+        
+        </ul>
+      </div>
+    </div>
+    <canvas></canvas>
+  </div>
+
+  <div class="block-right">
+     <div class="content">
+      <div class="main-info">
+        <a href="{{ site.url }}/needle/blog" class="logo"><img src="{{ site.url }}/images/needle.jpg"></a>
+      <!--   <h1 style="color:black">
+          Needle
+        </h1> -->
+        <h2 style="color:black">
+        The iOS Security Assessment Framework <br><a style="color:#072c68;" href="https://labs.mwrinfosecurity.com">MWR Labs</a>
+        </h2>
+        <ul>
+          <li><a class="social-btn" href="https://twitter.com/mwrneedle" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-twitter"></i></a></li>
+          <li><a class="social-btn" href="https://github.com/mwrlabs/needle" target="_blank" rel="noopener noreferrer"><i class="fa fa-fw fa-github"></i></a></li>
+        
+        </ul>      </div>
+    </div>
+  </div>
+
+  {% include overlay.html %}
+  {% include scripts.html %}
+  <script src="{{ site.url }}/assets/js/canvas.js"></script>
+</body>
+</html>

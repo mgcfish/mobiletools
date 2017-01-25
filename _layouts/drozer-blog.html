@@ -1,0 +1,77 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body id="posts" class="inner-post-page">
+
+ <div class="block-left">
+      <div class="content">
+<!--         <a href="{{ site.url }}" class="logo"><img src="{{ site.url }}/images/android.png"></a> -->
+        <div class="post-title-section">
+          <div class="section-line">Drozer<em></em></div>
+          <h1 class="section-title">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
+          <ul class="tags">
+                      <li><a href="{{ site.url }}/">Home</a></li>
+
+                      <li style="border-color: #00f1a3">Blog</li>
+
+            <li><a href="{{ site.url }}/drozer/usage">User Guide</a></li>
+                        <li><a href="https://github.com/mwrlabs/drozer/releases">Download</a></li>
+
+            <li><a href="https://github.com/mwrlabs/drozer/wiki">Contributing to Drozer</a></li>
+
+            {% for tag in page.tags %}
+              <li><a href="{{ site.url }}/tags#{{ tag }}">{{ tag }}</a></li>
+
+              {% unless forloop.last %}
+              {% endunless %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+      © Content Copyright MWR InfoSecurity
+      </div>
+    </div>
+
+    <div class="block-right">
+
+      <div class="content">
+
+        <ul class="posts-list">
+        {% for post in site.posts %}
+          {% if post.categories contains 'drozer' %}
+          {% if post.categories contains 'blog' %}
+
+          <li>
+            <h2>
+              <a href="{{ site.url }}{{ post.url }}" class="post-title">
+                <span>{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+              </a>
+              <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
+            </h2>
+            <p>{{ post.description | strip_html }}</p>
+            <ul class="tags">
+            {% for tag in post.tags %}
+              <li><a href="{{ site.url }}/tags#{{ tag }}">{{ tag }}</a></li>
+              {% unless forloop.last %}
+              {% endunless %}
+            {% endfor %}
+            </ul>
+          </li>
+            {% endif %}
+            {% endif %}
+
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+    {% include overlay.html %}
+    {% include scripts.html %}
+
+  </body>
+</html>

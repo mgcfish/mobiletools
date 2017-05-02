@@ -40,7 +40,7 @@ layout: compress
       </div>
     
       <div class="inner-post content">
-        <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
+        <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}{% if page.author %} - {{ page.author }}{% endif %}</div>
         {{ content }}
         <br>
       </div>

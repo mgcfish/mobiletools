@@ -30,7 +30,7 @@ Given one or more restrictions and/or configuration profiles enforced, an `“Ef
 
 The `“EffectiveUserSettings.plist"` file defines what restrictions are currently enforced on the device, taking into account any configuration profiles that are applied, as well as individual user-controlled settings. This shows that a lot of the information required to perform an MDM assessment is stored within this single file. With this in mind, it should be possible to compare the `“EffectiveUserSettings.plist"` file from a device configured to be secure, based on what a client’s security requirements are, with the `“EffectiveUserSettings.plist"` file from the test device subject to the MDM assessment. This is precisely what the `“mdm/effective_user_settings"` module in MWR’s Needle does:
 
-![Image: Module Info Preview Image.](http://mobiletools.mwrinfosecurity.com/assets/images/needle_mdm_module/Image_01.png "Module Info Preview.")
+![Image: Module Info Preview Image.](http://mobiletools.mwrinfosecurity.com/images/needle_mdm_module/Image_01.png "Module Info Preview.")
 
 The module has two main functions:
 
@@ -41,11 +41,11 @@ The module has two main functions:
 
 The module’s default configuration can be used to pull the `“EffectiveUserSettings.plist"` file from a device, as seen below: 
 
-![Image: Pull Effective Configuration Image.](http://mobiletools.mwrinfosecurity.com/assets/images/needle_mdm_module/Image_02.png "Pull Effective Configuration.")
+![Image: Pull Effective Configuration Image.](http://mobiletools.mwrinfosecurity.com/images/needle_mdm_module/Image_02.png "Pull Effective Configuration.")
 
 This module will pull the `“EffectiveUserSettings.plist"` file from the device and store it within the `“/root/.needle/output/"` directory. This file can then renamed and moved to a more permanent location for later use:
 
-![Image: Rename Configuration File.](http://mobiletools.mwrinfosecurity.com/assets/images/needle_mdm_module/Image_03.png "Rename Configuration File.")
+![Image: Rename Configuration File.](http://mobiletools.mwrinfosecurity.com/images/needle_mdm_module/Image_03.png "Rename Configuration File.")
 
 This file can be used as a template for an assessment of a device configuration enforsed by an MDM solition.
 
@@ -53,15 +53,15 @@ This file can be used as a template for an assessment of a device configuration 
 
 Once a template `“EffectiveUserSettings.plist"` file is stored locally, it can be used by the `“mdm/effective_user_settings"` module to perform a template-driven assessment of a device’s configuration. This is done by setting the modules `“PULL_ONLY"` option to `“False"` and supplying the full path to the `“template"` file within the `“TEMPLATE"` option:
 
-![Image: Configure Template-Driven Assessment.](http://mobiletools.mwrinfosecurity.com/assets/images/needle_mdm_module/Image_04.png "Configure Template-Driven Assessment.")
+![Image: Configure Template-Driven Assessment.](http://mobiletools.mwrinfosecurity.com/images/needle_mdm_module/Image_04.png "Configure Template-Driven Assessment.")
 
 Once these options have been configured, the module can be run to perform an automated assessment:
 
-![Image: Run Template-Driven Assessment.](http://mobiletools.mwrinfosecurity.com/assets/images/needle_mdm_module/Image_05.png "Run Template-Driven Assessment.")
+![Image: Run Template-Driven Assessment.](http://mobiletools.mwrinfosecurity.com/images/needle_mdm_module/Image_05.png "Run Template-Driven Assessment.")
 
 The module will output a summary of what settings are not in line with the configuration template, along with any recommended changes where appropriate:
 
-![Image: Template-Driven Assessment Output.](http://mobiletools.mwrinfosecurity.com/assets/images/needle_mdm_module/Image_06.png "Template-Driven Assessment Output.")
+![Image: Template-Driven Assessment Output.](http://mobiletools.mwrinfosecurity.com/images/needle_mdm_module/Image_06.png "Template-Driven Assessment Output.")
 
 The template used in the above example was configured to highlight configuration issues that may allow a user to exfiltrate data from the device. The output from the module shows that the configuration applied to the device by the MDM solution supports a number of ways to exfiltrate sensitive data, such as screenshots, screen recording, and iCloud backup. The output has also highlighted that the configuration supports insecure passwords and a weak screen lock grace period.
 

@@ -2,6 +2,7 @@
 layout: needle-post
 title: "One Small Step for MDM Assessments"
 description: Needle for iOS MDM Assessments.
+author: "Oliver Simonnet"
 categories:
   - needle
   - blog

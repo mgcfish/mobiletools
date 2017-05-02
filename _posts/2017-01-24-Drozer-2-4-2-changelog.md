@@ -2,6 +2,7 @@
 layout: drozer-post
 title: "Drozer 2.4.2 Changelog"
 description: A list of changes in the new version of Drozer
+author: "Henry Hoggard"
 categories:
   - drozer
   - blog

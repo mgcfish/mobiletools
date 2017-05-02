@@ -2,6 +2,7 @@
 layout: needle-post
 title: "Needle V0.1.1"
 description: New Release
+author: "Marco Lancini"
 categories:
   - needle
   - blog

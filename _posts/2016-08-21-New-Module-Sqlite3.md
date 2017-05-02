@@ -2,6 +2,7 @@
 layout: drozer-post
 title: "New Module: Sqlite3"
 description: A sqlite3 setup module has been added to drozer
+author: "Henry Hoggard"
 categories:
   - drozer
   - blog

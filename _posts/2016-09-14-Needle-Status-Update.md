@@ -2,6 +2,7 @@
 layout: needle-post
 title: "Needle Status Update"
 description: What happens now?
+author: "Marco Lancini"
 categories:
   - needle
   - blog

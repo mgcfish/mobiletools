@@ -2,6 +2,7 @@
 layout: drozer-post
 title: "New Module: SELinux Permissions Check"
 description: New module for assessing SELinux Permissions.
+author: "Henry Hoggard"
 categories:
   - drozer
   - blog
